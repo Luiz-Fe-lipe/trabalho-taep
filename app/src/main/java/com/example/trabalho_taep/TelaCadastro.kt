@@ -11,21 +11,7 @@ import androidx.core.view.ViewCompat
 import androidx.core.view.WindowInsetsCompat
 import com.google.firebase.auth.FirebaseAuth
 
-
 class TelaCadastro : AppCompatActivity() {
-
-
-    data class Item(
-        var login: String? = null,
-        var senha: String? = null,
-        var email: String? = null
-    )
-
-        var btCadastrar = findViewById<Button>(R.id.bttCadastrarse)
-        var btVoltar = findViewById<Button>(R.id.bttVoltar)
-
-        lateinit var auth: FirebaseAuth
-        //auth = FirebaseAuth.getInstace()
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,6 +22,11 @@ class TelaCadastro : AppCompatActivity() {
             v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom)
             insets
         }
+
+        var btCadastrar = findViewById<Button>(R.id.bttCadastrarse)
+        var btVoltar = findViewById<Button>(R.id.bttVoltar)
+        lateinit var auth: FirebaseAuth
+        auth = FirebaseAuth.getInstance()
 
         btCadastrar.setOnClickListener{
 

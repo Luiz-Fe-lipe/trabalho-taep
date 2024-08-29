@@ -2,6 +2,7 @@ plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.jetbrains.kotlin.android)
     alias(libs.plugins.google.gms.google.services)
+
 }
 
 android {
@@ -34,6 +35,8 @@ android {
     kotlinOptions {
         jvmTarget = "1.8"
     }
+    ndkVersion = "26.1.10909125"
+    buildToolsVersion = "34.0.0"
 }
 
 dependencies {
@@ -43,7 +46,6 @@ dependencies {
     implementation(libs.material)
     implementation(libs.androidx.activity)
     implementation(libs.androidx.constraintlayout)
-    implementation(libs.firebase.common.ktx)
     implementation(libs.firebase.auth)
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)

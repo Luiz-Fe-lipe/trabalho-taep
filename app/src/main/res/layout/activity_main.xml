@@ -2,39 +2,26 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:id="@+id/main"
+    android:id="@+id/menujogos"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#858585"
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/txtLoginLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Login"
-        android:inputType="text"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.212"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.3" />
-
-    <EditText
         android:id="@+id/txtSenhaLogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="296dp"
+        android:layout_height="42dp"
         android:ems="10"
         android:hint="Senha"
         android:inputType="textPassword"
+        android:text="123456"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.212"
+        app:layout_constraintHorizontal_bias="0.373"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtLoginLogin"
-        app:layout_constraintVertical_bias="0.114" />
+        app:layout_constraintTop_toBottomOf="@+id/txtEmailLogin"
+        app:layout_constraintVertical_bias="0.125" />
 
     <Button
         android:id="@+id/bttEntrar"
@@ -83,4 +70,20 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.074"
         app:srcCompat="@drawable/_213460_account_avatar_head_person_profile_user_115386" />
+
+    <EditText
+        android:id="@+id/txtEmailLogin"
+        android:layout_width="294dp"
+        android:layout_height="39dp"
+        android:ems="10"
+        android:hint="Email"
+        android:inputType="text|textEmailAddress"
+        android:text="test@test.com"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.367"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView"
+        app:layout_constraintVertical_bias="0.484" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
