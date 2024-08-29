@@ -4,6 +4,7 @@ import android.content.Context
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
+import android.widget.EditText
 import android.widget.Toast
 import androidx.activity.enableEdgeToEdge
 import androidx.appcompat.app.AppCompatActivity
@@ -25,18 +26,20 @@ class TelaCadastro : AppCompatActivity() {
 
         var btCadastrar = findViewById<Button>(R.id.bttCadastrarse)
         var btVoltar = findViewById<Button>(R.id.bttVoltar)
+        var txtEmailC = findViewById<EditText>(R.id.txtEmailCadastro)
+        var txtSenhaC = findViewById<EditText>(R.id.txtSenhaCadastro)
+        val ir_login = Intent (this, MainActivity::class.java)
         lateinit var auth: FirebaseAuth
         auth = FirebaseAuth.getInstance()
 
         btCadastrar.setOnClickListener{
-
-            Toast.makeText(this, "Cadastrar-se Apertado", Toast.LENGTH_SHORT).show()
-
+            Toast.makeText(this, "Cadastrado com suecesso!", Toast.LENGTH_SHORT).show()
+            auth.createUserWithEmailAndPassword(txtEmailC.text.toString(), txtSenhaC.text.toString())
+            startActivity(ir_login)
         }
 
         btVoltar.setOnClickListener{
-            val intent = Intent (this, MainActivity::class.java)
-            startActivity(intent)
+            startActivity(ir_login)
         }
 
     }
